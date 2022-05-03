@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(8, 53, 105);
+    background-image: url(Body2.jpg);
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+}
+.container { 
+   background-image: url(Body1.jpg);
+   background-size: auto;
+   background-position: center;
+   background-repeat: no-repeat;
+   color: white;
+   border-radius: 50px;
+  border-style: groove;
+   padding: 10x 10px;
+   margin: 100px;
+   
+}
+input {
+    font-size: 15px;
+    width: 25%;
+    height: 50px;
+  
+}
