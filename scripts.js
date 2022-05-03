@@ -45,14 +45,14 @@ var tiempoMostrado = document.getElementById("timeSpan");
 
 var palabraIngresada = document.getElementById("text");
 
-tiempoMostrado.innerHTML = time + "s";
+tiempoMostrado.innerHTML = time + "se";
 
 
 palabraIngresada.addEventListener("keypress", function () {
     if (event.key == "Enter") {
         if (palabraIngresada.value == palabraAleatoria.innerHTML) {
             (time += 3);
-            tiempoMostrado.innerHTML = time + "s";
+            tiempoMostrado.innerHTML = time + "se";
             (palabraIngresada.value = "");
             addToDom();
             updateScore();
@@ -71,7 +71,7 @@ function actualizarTiempo() {
         gameOver();
     } else {
         time--;
-        tiempoMostrado.innerHTML = time + "s";
+        tiempoMostrado.innerHTML = time + "se";
     }
 };
 
@@ -90,8 +90,9 @@ var contenedorGameOver = document.getElementById("end-game-container");
 var divisionPrincipal = document.getElementById("main");
 
 function gameOver() {
-    var tituloSinTiempo = "<p>Has perdido</p>";
-    var botonVolveAEmpezar = '<button onclick="location.reload()">Volvé a empezar</button>';
-    contenedorGameOver.innerHTML = tituloSinTiempo + botonVolveAEmpezar;
+    var volveAEmpezar = '<button onclick="location.reload()">Volvé a empezar</button>' + '<br>';
+    var hasPerdido = "<p>Has perdido</p>";
+    var volveAEmpezar = '<button onclick="location.reload()">Volvé a empezar</button>' + '<br>';
+    contenedorGameOver.innerHTML = hasPerdido + volveAEmpezar;
     divisionPrincipal.innerHTML = "";
 };
